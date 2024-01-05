@@ -1,0 +1,55 @@
+﻿<Window x:Class="Calendar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calendar"
+        mc:Ignorable="d"
+        Title="Calendar" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Label x:Name="Label_curr_date" Content="" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            <Label x:Name="Label_day_of_week" Content="" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            <Label x:Name="Label_curr_time" Content="" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="2">
+            <Label x:Name="Label_add_reminder" Content="Add reminder"></Label>
+            <DatePicker x:Name="DatePicker_add_reminder"></DatePicker>
+            <Label x:Name="Label_reminder_time" Content="Time"></Label>
+            <TextBox x:Name="TextBox_reminder_time"></TextBox>
+            <DatePickerTextBox x:Name="DatePickerTextBox_reminder_text"></DatePickerTextBox>
+            <Button x:Name="Button_add_reminder" Content="Add" Margin="0,12,0,0" Click="Button_add_reminder_Click"></Button>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="2">
+            <Button x:Name="Button_show_all_reminders" Content="All reminders" Click="Button_show_all_reminders_Click"></Button>
+            <Button x:Name="Button_edit_reminders" Content="Edit" Click="Button_edit_reminders_Click"></Button>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <Label x:Name="Label_add_holiday" Content="Add holiday"></Label>
+            <DatePicker x:Name="DatePicker_add_holiday"></DatePicker>
+            <Label x:Name="Label_holiday_name" Content="Holiday name"></Label>
+            <TextBox x:Name="TextBox_holiday_name"></TextBox>
+            <Button x:Name="Button_add_holiday" Content="Add" Margin="0,30,0,0" Click="Button_add_holiday_Click"></Button>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <Button x:Name="Button_show_all_holidays" Content="All holidays" Click="Button_show_all_holidays_Click"></Button>
+            <Button x:Name="Button_edit_holidays" Content="Edit" Click="Button_edit_holidays_Click"></Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <Label x:Name="Label_curr_reminder" FontSize="14"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Label x:Name="Label_curr_holiday" FontSize="18"/>
+        </StackPanel>
+    </Grid>
+</Window>
